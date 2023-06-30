@@ -25,8 +25,13 @@ class MainController {
           },
         ],
         mode: "payment",
-        success_url: "https://www.google.com/",  
-        cancel_url: "https://twitter.com/",
+        // On your local machine
+        success_url: "http://localhost:3000/success",  
+        cancel_url: "https://localhost:3000/error",
+
+        // On your deployed link ( right now its mine when you deployed yours then you need to change it again)
+        // success_url: "https://qpayment.netlify.app/success",    
+        // cancel_url: "https://qpayment.netlify.app/error",
       });
 
       res.json({ url: session.url });
